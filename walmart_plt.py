@@ -4,8 +4,8 @@ gap = 0.1
 # k_max = k_count[-1][0]
 # print(k_max)
 k_max = 25
-# folder = data
 data = './figure/walmart/walmart'
+folder = data
 
 origin_A = folder +f'_1_result_{gap}.txt'
 origin_B = folder +f'_2_result_{gap}.txt'

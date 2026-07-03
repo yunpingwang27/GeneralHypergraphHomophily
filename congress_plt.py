@@ -1,5 +1,5 @@
 from plt_for_all import get_result,plt_all
-gap = 0.04
+gap = 0.05
 k_max = 25
 folder = "./figure/congress/"
 result_origin_A = get_result(folder+f'congress_1_result_{gap}.txt')

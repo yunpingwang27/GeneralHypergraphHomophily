@@ -1,7 +1,7 @@
 from get_total_t_k import get_pro_result,get_random,get_rand_pro_result
 
 AorB = 1
-gap = 0.04
+gap = 0.05
 folder ="./figure/congress/"
 data = folder+'congress'
 result,class_propotion,k_count = get_pro_result(label_file_name='./original-data/congress-bills/node-labels-congress-bills.txt',edge_file_name='./original-data/congress-bills/hyperedges-test.txt',data_name=data,AorB = AorB,gap=gap)
