@@ -102,9 +102,9 @@ def plot(index,result_A,result_B,label,image_name = 'result_A_B_diff.png',horb =
     plt.plot(index[:],result_B[:],label = label[1],marker = markers[2], markersize=marker_size)
     plt.xlabel('s')
     if horb == 'h':
-        plt.ylabel('$h_{s,t}(X)$')
+        plt.ylabel('$h_{s,t}(\cdot)$')
     else:
-        plt.ylabel('$b_{s,t}(X)$')
+        plt.ylabel('$b_{s,t}(\cdot)$')
     plt.legend()
     plt.grid(alpha = 0.5)
     plt.savefig(image_name)
@@ -119,9 +119,9 @@ def plt_h_b(index,plot_data_A,plot_data_B,label,image_name = 'h_b.png',gap = 0.0
 
     plt.clf()
     plt.figure(figsize= (7.1,4.5))
-    # plt.plot(index[:],plot_data_A[:],label = label[0],marker = markers[0], markersize=marker_size,color = 'k')
-    plt.plot(index[:],plot_data_A[:],label = label[0],marker = markers[0], markersize=marker_size,linestyle = line_styles[0])
-    plt.plot(index[:],plot_data_B[:],label = label[1],marker = markers[2], markersize=marker_size,linestyle = line_styles[1])
+    plt.plot(index[:],plot_data_A[:],label = label[0],marker = markers[0], markersize=marker_size,color = 'k')
+    # plt.plot(index[:],plot_data_A[:],label = label[0],marker = markers[0], markersize=marker_size,linestyle = line_styles[0])
+    # plt.plot(index[:],plot_data_B[:],label = label[1],marker = markers[2], markersize=marker_size,linestyle = line_styles[1])
     
     symmetry = (1-gap)/2
     x_ticks = [0, 0.2, 0.4,0.6,0.8]  
@@ -133,7 +133,7 @@ def plt_h_b(index,plot_data_A,plot_data_B,label,image_name = 'h_b.png',gap = 0.0
     plt.xticks(x_ticks)
     
     plt.axhline(y=1, linestyle='dashed', color='darkred', label='Value 1')
-    plt.ylabel('Homophily Score $H_{s,t}(X)$')
+    plt.ylabel('Homophily Score $H_{s,t}(\cdot)$')
     plt.xlabel('s')
     plt.yscale('log')
     plt.grid(alpha = 0.5)
@@ -167,7 +167,7 @@ def plt_all(result_A,result_B,result_origin_A,result_origin_B,gap,k_max,label,fo
     plt.figure(figsize= (7.1,4.5))
     plt.plot(index[:],plot_data_A[:],label = label[0],marker = markers[0], markersize=marker_size,linestyle = line_styles[0])
     plt.plot(index[:],plot_data_B[:],label = label[1],marker = markers[2], markersize=marker_size,linestyle = line_styles[1])
-    plt.ylabel('Normalized Bias Score $f_{s,t}(X)$')
+    plt.ylabel('Normalized Bias Score $f_{s,t}(\cdot)$')
     plt.xlabel('s')
     plt.grid(alpha = 0.5)
     plt.legend()
@@ -198,7 +198,7 @@ def plt_all_t_ana(result_A,result_B,result_origin_A,result_origin_B,gap,k_max,la
     plt.figure(figsize= (7.1,4.5))
     plt.plot(index[:],plot_data_A[:],label = label[0],marker = markers[0], markersize=marker_size,linestyle = line_styles[0])
     plt.plot(index[:],plot_data_B[:],label = label[1],marker = markers[2], markersize=marker_size,linestyle = line_styles[1])
-    plt.ylabel('normalized_bias_score')
+    plt.ylabel('Normalized Bias Score $f_{s,t}(\cdot)$')
     plt.xlabel('s')
     plt.grid(alpha = 0.5)
     plt.legend()
@@ -227,7 +227,7 @@ def plt_h_b1(index,plot_data_A,plot_data_B,plot_data_C,label,image_name = 'h_b.p
         plt.xticks(x_ticks)
     
     plt.axhline(y=1, linestyle='dashed', color='darkred', label='Value 1')
-    plt.ylabel('Homophily Score $H_{s,t}(X)$')
+    plt.ylabel('Homophily Score $H_{s,t}(\cdot)$')
     plt.xlabel('s')
     plt.yscale('log')
     plt.grid(alpha = 0.5)
@@ -260,7 +260,7 @@ def plt_h_b2(index,plot_data_A,plot_data_B,plot_data_C,plot_data_D,plot_data_E,l
         plt.xticks(x_ticks)
     
     plt.axhline(y=1, linestyle='dashed', color='darkred', label='Value 1')
-    plt.ylabel('Homophily Score $H_{s,t}(X)$')
+    plt.ylabel('Homophily Score $H_{s,t}(\cdot)$')
     plt.xlabel('s')
     plt.yscale('log')
     plt.grid(alpha = 0.5)
@@ -290,7 +290,7 @@ def plt_h_b_all(index,plot_data,class_num,label,image_name = 'h_b.png',gap = 0.0
         plt.xticks(x_ticks)
     
     plt.axhline(y=1, linestyle='dashed', color='darkred', label='Value 1')
-    plt.ylabel('Homophily Score $H_{s,t}(X)$')
+    plt.ylabel('Homophily Score $H_{s,t}(\cdot)$')
     plt.xlabel('s')
     plt.yscale('log')
     plt.grid(alpha = 0.5)
@@ -325,7 +325,7 @@ def plt_all1(result_A,result_B,result_C,result_origin_A,result_origin_B,result_o
     plt.plot(index[:],plot_data_A[:],label = label[0], marker=markers[0], markersize=marker_size,linestyle = line_styles[0])
     plt.plot(index[:],plot_data_B[:],label = label[1], marker=markers[1], markersize=marker_size,linestyle = line_styles[1])
     plt.plot(index[:],plot_data_C[:],label = label[2], marker=markers[2], markersize=marker_size,linestyle = line_styles[2])
-    plt.ylabel('Normalized Bias Score $f_{s,t}(X)$')
+    plt.ylabel('Normalized Bias Score $f_{s,t}(\cdot)$')
     plt.xlabel('s')
     plt.grid(alpha = 0.5)
     plt.legend()
@@ -352,7 +352,7 @@ def plt_all2(result,result_origin,class_num,gap,k_max,label,folder = './figure/c
         plot_data_A  = get_normalized_bias(result_origin[i],result[i])
         plt.plot(index[:],plot_data_A[:],label = "class "+chr(i+1+64),color = colors[i],marker = markers[i],linestyle = line_styles[i//2], markersize=marker_size)
     
-    plt.ylabel('Normalized Bias Score $f_{s,t}(X)$')
+    plt.ylabel('Normalized Bias Score $f_{s,t}(\cdot)$')
     plt.xlabel('s')
     plt.grid(alpha = 0.5)
     plt.legend()
