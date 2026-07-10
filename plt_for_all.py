@@ -119,9 +119,9 @@ def plt_h_b(index,plot_data_A,plot_data_B,label,image_name = 'h_b.png',gap = 0.0
 
     plt.clf()
     plt.figure(figsize= (7.1,4.5))
-    plt.plot(index[:],plot_data_A[:],label = label[0],marker = markers[0], markersize=marker_size,color = 'k')
-    # plt.plot(index[:],plot_data_A[:],label = label[0],marker = markers[0], markersize=marker_size,linestyle = line_styles[0])
-    # plt.plot(index[:],plot_data_B[:],label = label[1],marker = markers[2], markersize=marker_size,linestyle = line_styles[1])
+    # plt.plot(index[:],plot_data_A[:],label = label[0],marker = markers[0], markersize=marker_size,color = 'k')
+    plt.plot(index[:],plot_data_A[:],label = label[0],marker = markers[0], markersize=marker_size,linestyle = line_styles[0])
+    plt.plot(index[:],plot_data_B[:],label = label[1],marker = markers[2], markersize=marker_size,linestyle = line_styles[1])
     
     symmetry = (1-gap)/2
     x_ticks = [0, 0.2, 0.4,0.6,0.8]  
